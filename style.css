@@ -30,3 +30,19 @@ section {
     padding: 10px;
     border-radius: 5px;
 }
+
+/* Gaya untuk Bagian "Tentang Saya" */
+#about {
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    flex: 1; /* Membagi ruang dengan gambar */
+}
+
+img {
+    max-width: 100%; /* Menghindari gambar yang terlalu besar */
+    margin-left: 20px; /* Jarak antara teks dan gambar */
+}
+
