@@ -34,15 +34,38 @@ section {
 /* Gaya untuk Bagian "Tentang Saya" */
 #about {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .about-content {
-    flex: 1; /* Membagi ruang dengan gambar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.about-text {
+    margin-bottom: 20px;
+    max-width: 100%;
+    text-align: center;
 }
 
 img {
-    max-width: 100%; /* Menghindari gambar yang terlalu besar */
-    margin-left: 20px; /* Jarak antara teks dan gambar */
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
+/* Media Queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-bottom: 10px;
+    }
+}
