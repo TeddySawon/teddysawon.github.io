@@ -64,7 +64,6 @@ img {
     height: auto; /* Mempertahankan aspek rasio gambar */
 }
 
-
 /* Media Queries untuk tampilan mobile */
 @media (max-width: 768px) {
     .about-content {
