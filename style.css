@@ -64,7 +64,7 @@ img {
     height: auto; /* Mempertahankan aspek rasio gambar */
 }
 
-/* Media Queries untuk tampilan mobile */
+/* Media Queries untuk tampilan mobile
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -73,6 +73,31 @@ img {
 
     .about-text {
         margin-bottom: 10px;
+    }
+} */
+
+.about-text {
+    font-size: 24px; /* Ukuran teks default */
+}
+
+/* Media query untuk layar berukuran kecil, misalnya smartphone */
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 18px; /* Ukuran teks untuk layar smartphone */
+    }
+}
+
+/* Media query untuk layar berukuran sedang, misalnya tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-text {
+        font-size: 20px; /* Ukuran teks untuk layar tablet */
+    }
+}
+
+/* Media query untuk layar berukuran besar, misalnya desktop */
+@media (min-width: 1025px) {
+    .about-text {
+        font-size: 24px; /* Ukuran teks untuk layar desktop */
     }
 }
 
