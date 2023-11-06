@@ -2,66 +2,119 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="hobi/css/hobiGambar.css">
 </head>
 <body>
-    <section>
-        <h1>Menulis</h1>
-    </section>
-    <section>
-        <table>
-            <tr>
-                <td>
-                    <div class="about-content"> 
-                        <img src="hobi/Menulis/adil.png" width="200" height="200">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="about-content"> 
-                        <img src="hobi/Menulis/whoknows.png" width="200" height="200">
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </section>
 
-    <section>
-        <h1>Animasi</h1>
-    </section>
-    <section>
-        <table>
-            <tr>
-                <td>
-                    <div class="about-content"> 
-                        <img src="hobi/Animasi/1.png" width="320" height="180">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="about-content"> 
-                        <img src="hobi/Animasi/2.png" width="320" height="180">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="about-content"> 
-                        <img src="hobi/Animasi/3.jpg" width="320" height="180">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="about-content"> 
-                        <img src="hobi/Animasi/4.png" width="320" height="180">
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </section>
+	<section>
+		<div class="w3-container">
+		  <h2>Menulis</h2>
+		  <p>Salah satu hobi saya adalah menulis, saya biasa menulis abstrak disaat waktu luang, dan ini adalah salah sekian tulisan saya.</p>
+		</div>
+	</section>
+		
+	<section>
+		<div class="w3-content w3-display-container">
+			<div class="w3-display-container writtenSlides">
+			  <img src="hobi/Menulis/adil.png" width="200">
+			  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+				French Alps
+			  </div>
+			</div>
 
+			<div class="w3-display-container writtenSlides">
+			  <img src="hobi/Menulis/whoknows.png" width="200" height="200">
+			  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+				Northern Lights
+			  </div>
+			</div>
+
+			<button class="w3-button w3-display-left w3-black" onclick="writenDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-display-right w3-black" onclick="writenDivs(1)">&#10095;</button>
+		</div>
+	</section>
+	
+	<section>
+		<div class="w3-container">
+		  <h2>Animasi</h2>
+		  <p>Salah satu hobi saya adalah membuat Animasi 3D menggunakan Blender, saya biasa membuatnya dengan abstrak disaat waktu luang, dan ini adalah salah sekian tulisan saya.</p>
+		</div>
+	</section>
+		
+	<section>
+		<div class="w3-content w3-display-container">
+			<div class="w3-display-container animSlides">
+			  <img src="hobi/Animasi/1.png" width="100%">
+			  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+				French Alps
+			  </div>
+			</div>
+
+			<div class="w3-display-container animSlides">
+			  <img src="hobi/Animasi/2.png" width="100%">
+			  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+				French Alps
+			  </div>
+			</div>
+			
+			<div class="w3-display-container animSlides">
+			  <img src="hobi/Animasi/3.jpg" width="100%">
+			  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+				French Alps
+			  </div>
+			</div>
+			
+			<div class="w3-display-container animSlides">
+			  <img src="hobi/Animasi/4.png" width="100%">
+			  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+				French Alps
+			  </div>
+			</div>
+
+			<button class="w3-button w3-display-left w3-black" onclick="animDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-display-right w3-black" onclick="animDivs(1)">&#10095;</button>
+		</div>
+	</section>
+	
+
+	<script>
+	var slideWrittenIndex = 1;
+	showWrittenDivs(slideWrittenIndex);
+
+	function writenDivs(n) {
+	  showWrittenDivs(slideWrittenIndex += n);
+	}
+
+	function showWrittenDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("writtenSlides");
+	  if (n > x.length) {slideWrittenIndex = 1}
+	  if (n < 1) {slideWrittenIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  x[slideWrittenIndex-1].style.display = "block";  
+	}
+	
+	var slideAnimIndex = 1;
+	showAnimDivs(slideAnimIndex);
+
+	function animDivs(c) {
+	  showAnimDivs(slideAnimIndex += c);
+	}
+
+	function showAnimDivs(c) {
+	  var anim;
+	  var xAnim = document.getElementsByClassName("animSlides");
+	  if (c > xAnim.length) {slideAnimIndex = 1}
+	  if (c < 1) {slideAnimIndex = xAnim.length}
+	  for (anim = 0; anim < xAnim.length; anim++) {
+		 xAnim[anim].style.display = "none";  
+	  }
+	  xAnim[slideAnimIndex-1].style.display = "block";  
+	}
+	</script>
 </body>
 </html>
