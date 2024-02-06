@@ -1,44 +1,155 @@
-		.parent {
-			text-align: center;
-		}
-		
-		.card {
-		  padding-top: 50px;
-		  /* border-radius: 10px; */
-		  border: 3px solid rgb(255, 255, 255);
-		  transform-style: preserve-3d;
-		  background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
-			  repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#ffffff 0 18.75%);
-		  background-size: 60px 60px;
-		  background-position: 0 0, 0 0;
-		  background-color: #f0f0f0;
-		  width: 100%;
-		  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
-		  transition: all 0.5s ease-in-out;
-		}
+body {
+      font-family: Arial, sans-serif;
+    }
 
-		.card:hover {
-		  background-position: -100px 100px, -100px 100px;
-		  transform: rotate3d(0.5, 1, 0, 30deg);
-		}
+    .keterangan {
+      margin-top: 20px;;
+	  font-size: 18px;
+	  margin-left: 5%;
+	  text-align: center-left;
+	  color: var(--main-color);
+    }
+	
+	.keterangan1 {
+		cursor: pointer;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--main-color);
+	  
+	  background-color: whitesmoke; 
+	  padding: 10px;
+	  margin-left: 35px;
+	  margin-right: 70px;
+	  border-top-left-radius: 15px;
+	  border-top-right-radius: 15px; 
+	  border-bottom-left-radius: 15px;
+	  border-bottom-right-radius: 15px;
+    }
 
-		.content-box {
-		  background: rgba(4, 193, 250, 0.732);
-		  /* border-radius: 10px 100px 10px 10px; */
-		  transition: all 0.5s ease-in-out;
-		  padding: 60px 25px 25px 25px;
-		  transform-style: preserve-3d;
-		}
+    .jumbatron {
+      color: #2e2e2e;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
+      /* Penambahan nilai warna dan spread untuk box shadow */
+      padding: 15px;
+      margin: 15px;
+    }
 
-		.content-box .card-title {
-		  display: inline-block;
-		  color: white;
-		  font-size: 25px;
-		  font-weight: 900;
-		  transition: all 0.5s ease-in-out;
-		  transform: translate3d(0px, 0px, 50px);
-		}
+    .toggle-button {
+      cursor: pointer;
+      margin-top: 60px;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--main-color);
 
-		.content-box .card-title:hover {
-		  transform: translate3d(0px, 0px, 60px);
-		}
+      background-color: white;
+      padding: 10px;
+      margin-left: 15px;
+      margin-right: 70px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    .card1 {
+      --main-color: #000;
+      --submain-color: #78858F;
+      --bg-color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 20px;
+      background: var(--bg-color);
+      box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1);
+      /* Penambahan nilai warna dan spread untuk box shadow */
+      padding: 10px;
+    }
+
+    .card1__img {
+      height: 192px;
+      width: 100%;
+    }
+
+    .card1__img svg {
+      height: 100%;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .card1__avatar {
+      position: absolute;
+      width: 114px;
+      height: 114px;
+      background: var(--bg-color);
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: calc(50% - 57px);
+    }
+
+    .card1__avatar img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card1__title {
+      margin-top: 60px;
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--main-color);
+    }
+
+    .card1__subtitle {
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--submain-color);
+    }
+
+    .card1__btn {
+      margin-top: 15px;
+      width: 76px;
+      height: 31px;
+      border: 2px solid var(--main-color);
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11px;
+      color: var(--main-color);
+      background: var(--bg-color);
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .card1__btn-solid {
+      background: var(--main-color);
+      color: var(--bg-color);
+    }
+
+    .card1__btn:hover {
+      background: var(--main-color);
+      color: var(--bg-color);
+    }
+
+    .card1__btn-solid:hover {
+      background: var(--bg-color);
+      color: var(--main-color);
+    }
+	
+	  .carousel-item img {
+		max-width: 100%; /* Pastikan gambar tidak melebihi lebar container */
+	  }
+
+	  .carousel-item .d-flex {
+		justify-content: center; /* Pusatkan gambar dan keterangan */
+	  }
+
+	  .carousel-caption {
+		margin-top: 0; /* Hapus margin atas keterangan */
+		text-align: left;
+	  }
