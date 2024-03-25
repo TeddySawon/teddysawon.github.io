@@ -1,0 +1,353 @@
+body {
+	font-family: "Courier New", monospace;
+	background: linear-gradient(to right, #2E2E2E, #27142A);
+}
+
+header {
+  color: #fff;
+  padding: 15px 0;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px; /* Adjust for wider content */
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav li a:hover {
+  background-color: #80AF70;
+  border-radius: 5px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Backlogo {
+	opacity: 0.5;
+	position: absolute;
+	width: 130px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.logo {
+	position: absolute;
+	margin-left: 5px;
+	margin-top: 30px;
+	display: flex;
+	width: 24px;
+	justify-content: space-between;
+	color: white;
+}
+
+.logo h2 {
+	font-size: 22px;
+	text-decoration: block;
+    margin-top: 25px;
+	margin-left: 10px;
+}
+.logo img {
+	margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.bio {
+	position: absolute;
+	margin-top: 200px;
+	display: inline-block;
+	left: 140px;
+}
+
+.bio .wa {
+	display: flex;
+	align-items: center;
+	align-content: center; 
+}
+
+.bio .wa img {
+	margin: 5px;
+}
+
+.bio .wa p {
+	margin-top: 15px;
+	margin: 3px;
+	color: white;
+	font-size: 18px;
+}
+
+.bio h1 {
+	font-style: italic;
+	font-family: "papyurs", fantasy;
+	color: white;
+	font-size: 65px;
+	text-shadow: 2px 10px 4px gray;
+}
+
+.bio h2 {
+	color: white;
+	margin-top: -40px;
+	font-size: 30px;
+}
+
+.bio p {
+	color: white;
+	margin-top: -10px;
+	font-size: 18px;
+}
+
+.profil {
+	position: absolute;
+	right: 5px;
+	margin-top: 10px;
+}
+
+.profil img{
+	opacity: 0.4;
+	position: absolute;
+	right: 5px;
+	border-radius: 50%;
+	width: 500px;
+	height: 500px;
+	object-fit: cover;
+}
+.whiteline {
+	position: absolute;
+	margin-top: 300px;
+	left: 50px;
+	width: 2px;
+    height: 100px;
+    background-color: white;
+}
+
+.shows {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+	margin-top: 820px;
+	width: 1300px;
+    height: 720px;
+}
+
+.welcome-line {
+	opacity: 0.5;
+	position: absolute;
+	left: 60px;
+	margin-top: 650px;
+}
+
+.welcome-line h1 {
+	transform: rotate(90deg);
+	transform-origin: left bottom;
+	font-size: 95px;
+	text-shadow: 2px 10px 4px gray;
+	color: white;
+}
+
+.welcome-line img {
+	opacity: 0.4;
+	border-radius: 70%;
+	width: 900px;
+	height: 900px;
+	object-fit: cover;
+}
+
+
+.menu {
+  font-family: "papyurs", fantasy;
+  position: absolute;
+  top: 800px; /* Keep the vertical position as desired */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Centering trick */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuToggle {
+  background-color: #7BB77B;
+  padding: 22px;
+  border-radius: 10%;
+  box-shadow: 2px 8px 22px gray;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Center text and arrow horizontally */
+}
+
+.menuToggle a {
+  font-size: 35px;
+  color: #D5D5D5;
+  margin-right: 10px; /* Add some spacing between text and arrow */
+  -webkit-text-stroke: 1px gray; /* Add an outline with a width of 1px and the desired color */
+  padding: 8px; /* Adjust padding for spacing between text and outline */
+  border-radius: 8px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Center the submenu horizontally */
+  width: 250px;
+  cursor: pointer;
+}
+
+.submenu .menupil a {
+	font-family: "Courier New", monospace;
+	color:white;
+}
+
+.submenu .menupil:hover a {
+	color: #7BB77B;
+}
+
+.menu:hover .submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+		margin-top: 250px;
+		align-items:center;
+      display: none;
+    }
+	
+	.gallery {
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+	color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.desc a h1 {
+	color:white;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.desc a h1:hover {
+	color:#80AF70;
+}
+
+.responsive {
+  padding: 0 40px;
+  margin: 15px auto;
+  width: 35%; /* Use percentages for better responsiveness */
+}
+
+
+/* Media query untuk layar kecil (mobile) */
+@media only screen and (max-width: 767px) {	
+	.bio {
+		left: 70px;
+	}
+	
+	.content {
+		align-items:left;
+	}
+
+	.responsive {
+		display: flex;
+		align-items: center;
+		align-content: center;
+	  padding: 0 10px;
+	  margin: 10px -180px;
+	  width: 19%; /* Use percentages for better responsiveness */
+	}
+	
+	.Backlogo {
+		opacity: 2;
+	}
+	
+	.shows {
+		margin-top: 750px;
+		width: 0;
+	}
+	
+	.welcome-line {
+		left: 10px;
+	}
+	
+	.welcome-line img {
+		border-radius: 20%;
+		width: 350px;
+		height: 500px;
+	}
+	
+	.welcome-line h1 {
+		font-size: 40px;
+	}
+	
+	.bio h1 {
+		font-size: 40px;
+	}
+
+	.bio h2 {
+		margin-top: -30px;
+		font-size: 28px;
+	}
+
+	.bio p {
+		font-size: 15px;
+	}
+  
+	.logo h2 {
+		font-size: 15px;
+	}
+
+	.menuToggle {
+		padding: 18px;
+	}
+	
+	.menuToggle a {
+		font-size: 22px;
+	}
+}
+
