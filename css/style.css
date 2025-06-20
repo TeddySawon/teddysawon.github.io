@@ -1,353 +1,584 @@
+/* Custom CSS for a Modern & Interactive Portfolio */
+
+/* --- Global Styles --- */
 body {
-	font-family: "Courier New", monospace;
-	background: linear-gradient(to right, #2E2E2E, #27142A);
+    font-family: 'Montserrat', sans-serif; /* Pilihan Font Utama */
+    color: #f0f0f0; /* Ubah warna teks default menjadi abu-abu terang agar terbaca di latar belakang gelap */
+    line-height: 1.6;
+    background-color: #1a1a2e; /* Warna latar belakang utama yang baru */
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+    transition: all 0.3s ease-in-out; /* Transisi untuk perubahan global */
 }
 
-header {
-  color: #fff;
-  padding: 15px 0;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; /* Font untuk Judul */
+    font-weight: 700;
+    color: #e0e0e0; /* Ubah warna judul menjadi abu-abu terang */
 }
 
-.container-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px; /* Adjust for wider content */
-  margin: 0 auto;
+/* --- Utility Classes --- */
+/* Tetap pertahankan warna aksen biru terang yang kontras */
+.text-primary-accent {
+    color: #007bff; /* Warna aksen utama */
 }
 
-.logo {
-  font-size: 24px;
-  text-decoration: none;
-  color: #fff;
+.bg-primary-accent {
+    background-color: #007bff; /* Warna aksen utama */
 }
 
-nav {
-  display: flex;
+/* --- Navbar --- */
+.navbar {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(26, 26, 46, 0.95); /* Sedikit lebih gelap dari background body, semi-transparan */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.navbar.scrolled {
+    background-color: rgba(26, 26, 46, 1) !important; /* Lebih solid saat discroll */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: #fff !important;
+    transition: color 0.3s ease;
 }
 
-nav li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  transition: all 0.3s ease-in-out;
+.navbar-brand:hover {
+    color: #007bff !important; /* Warna aksen saat hover */
 }
 
-nav li a:hover {
-  background-color: #80AF70;
-  border-radius: 5px;
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85) !important; /* Pastikan teks cukup terang */
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.footer-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.Backlogo {
-	opacity: 0.5;
-	position: absolute;
-	width: 130px;
-    height: 130px;
-    background-color: white;
-    border-radius: 50%;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #007bff !important; /* Warna aksen saat hover/active */
+    transform: translateY(-2px);
 }
 
-.logo {
-	position: absolute;
-	margin-left: 5px;
-	margin-top: 30px;
-	display: flex;
-	width: 24px;
-	justify-content: space-between;
-	color: white;
+.dropdown-menu {
+    background-color: #2b2b4d; /* Latar belakang dropdown yang sedikit lebih terang dari navbar */
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.logo h2 {
-	font-size: 22px;
-	text-decoration: block;
-    margin-top: 25px;
-	margin-left: 10px;
-}
-.logo img {
-	margin-right: 10px; /* Jarak antara gambar dan teks */
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.bio {
-	position: absolute;
-	margin-top: 200px;
-	display: inline-block;
-	left: 140px;
+.dropdown-item:hover {
+    background-color: #007bff; /* Warna aksen saat hover dropdown */
+    color: #fff !important;
 }
 
-.bio .wa {
-	display: flex;
-	align-items: center;
-	align-content: center; 
+/* --- Home Section --- */
+#home {
+    /* Gunakan warna aksen utama atau gradien yang kontras */
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Tetap gunakan gradien cerah untuk bagian hero */
+    position: relative;
+    z-index: 1;
+    padding-top: 56px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Teks putih di sini sudah bagus */
+    overflow: hidden;
 }
 
-.bio .wa img {
-	margin: 5px;
+/* Efek latar belakang partikel/geometris (pastikan kontras) */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08) 0%, transparent 50%), /* Sedikit lebih terang */
+                radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08) 0%, transparent 50%); /* Sedikit lebih terang */
+    z-index: -1;
+    animation: backgroundPulse 15s infinite alternate;
 }
 
-.bio .wa p {
-	margin-top: 15px;
-	margin: 3px;
-	color: white;
-	font-size: 18px;
+@keyframes backgroundPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.05); opacity: 0.9; }
 }
 
-.bio h1 {
-	font-style: italic;
-	font-family: "papyurs", fantasy;
-	color: white;
-	font-size: 65px;
-	text-shadow: 2px 10px 4px gray;
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Bayangan lebih gelap */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease-in-out;
+    margin-bottom: 2rem;
 }
 
-.bio h2 {
-	color: white;
-	margin-top: -40px;
-	font-size: 30px;
+.profile-pic:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Bayangan lebih gelap */
 }
 
-.bio p {
-	color: white;
-	margin-top: -10px;
-	font-size: 18px;
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
 }
 
-.profil {
-	position: absolute;
-	right: 5px;
-	margin-top: 10px;
+#home p.lead {
+    font-size: 1.25rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.profil img{
-	opacity: 0.4;
-	position: absolute;
-	right: 5px;
-	border-radius: 50%;
-	width: 500px;
-	height: 500px;
-	object-fit: cover;
-}
-.whiteline {
-	position: absolute;
-	margin-top: 300px;
-	left: 50px;
-	width: 2px;
-    height: 100px;
-    background-color: white;
+/* Animasi saat elemen dimuat */
+#home.loaded h1,
+#home.loaded p.lead,
+#home.loaded .btn {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.shows {
-	position: absolute;
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-width: 2px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-delay: 0.9s;
+}
+
+.btn-light { /* Tombol "Lihat Proyek Non-Profesional" */
+    background-color: #fff;
+    color: #007bff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-delay: 1.2s;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #007bff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Bayangan lebih gelap */
+}
+
+.btn-light:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Bayangan lebih gelap */
+}
+
+
+/* --- Professional Section (`professional.html`) --- */
+#professional-content {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    background-color: #2b2b4d; /* Warna latar belakang untuk halaman professional, sedikit lebih terang dari body */
+    color: #f0f0f0; /* Warna teks untuk bagian ini */
+}
+
+#professional-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #e0e0e0; /* Ubah warna judul */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+}
+
+#professional-content p.lead, #professional-content p {
+    font-size: 1.1rem;
+    color: #c0c0c0; /* Warna teks yang lebih terang untuk kontras */
+    opacity: 0;
+    transition: opacity 0.8s ease-out 0.6s;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#professional-content .btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out 0.9s, transform 0.8s ease-out 0.9s;
+}
+
+/* Animasi saat elemen dimuat */
+#professional-content.loaded h1,
+#professional-content.loaded p.lead,
+#professional-content.loaded p,
+#professional-content.loaded .btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Bayangan lebih gelap */
+}
+
+.btn-outline-dark { /* Ini akan di halaman professional.html */
+    border-color: #007bff; /* Gunakan warna aksen sebagai border */
+    color: #007bff; /* Gunakan warna aksen sebagai teks */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.btn-outline-dark:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Bayangan lebih gelap */
+}
+
+
+/* --- Non-Professional Section (`nonProfessional.html`) --- */
+#non-professional-content {
+    padding-top: 80px; /* Offset untuk navbar fixed */
+    background-color: #1a1a2e; /* Latar belakang halaman sesuai body */
+}
+
+#non-professional-content .container > .mb-5:first-child {
+    padding-top: 3rem;
+}
+
+.py-5 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+h1.display-4 { /* Judul di bagian atas halaman nonProfessional.html */
+    font-weight: 800;
+    color: #e0e0e0; /* Ubah warna judul */
+}
+
+p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
+    color: #c0c0c0; /* Ubah warna paragraf */
+}
+
+/* Kategori judul dengan underline animasi */
+#non-professional-content h2 {
+    position: relative;
+    padding-bottom: 0.5em;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    color: #e0e0e0; /* Ubah warna judul kategori */
+    text-align: center;
+}
+
+#non-professional-content h2::after {
+    content: '';
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-	margin-top: 820px;
-	width: 1300px;
-    height: 720px;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff; /* Warna aksen */
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.welcome-line {
-	opacity: 0.5;
-	position: absolute;
-	left: 60px;
-	margin-top: 650px;
+#non-professional-content h2:hover::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
-.welcome-line h1 {
-	transform: rotate(90deg);
-	transform-origin: left bottom;
-	font-size: 95px;
-	text-shadow: 2px 10px 4px gray;
-	color: white;
+/* Card Styling (Proyek & Sertifikat) */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease-in-out;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Bayangan lebih gelap */
+    background-color: #2b2b4d; /* Latar belakang card yang sedikit lebih terang dari body */
 }
 
-.welcome-line img {
-	opacity: 0.4;
-	border-radius: 70%;
-	width: 900px;
-	height: 900px;
-	object-fit: cover;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); /* Bayangan lebih kuat & gelap */
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    filter: grayscale(90%);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+
+.card-body {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 2;
+    background-color: #2b2b4d; /* Konsisten dengan card background */
+}
+
+.card-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #e0e0e0; /* Ubah warna judul card */
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #c0c0c0; /* Ubah warna teks card */
+    margin-bottom: 1rem;
+}
+
+.btn-primary.btn-sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    /* Warna tombol di card ini akan di-override oleh .category-section .btn-primary */
+}
+
+/* Khusus untuk video embed */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    height: 220px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.embed-responsive iframe,
+.embed-responsive video,
+.embed-responsive img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
 }
 
 
-.menu {
-  font-family: "papyurs", fantasy;
-  position: absolute;
-  top: 800px; /* Keep the vertical position as desired */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Centering trick */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* --- Non-Professional Section Specific Colors (Disesuaikan untuk tema gelap) --- */
+/* Gunakan gradien yang lebih gelap atau warna solid dengan sedikit opacity/noise untuk setiap section */
+.category-section {
+    transition: background-color 0.5s ease;
 }
 
-.menuToggle {
-  background-color: #7BB77B;
-  padding: 22px;
-  border-radius: 10%;
-  box-shadow: 2px 8px 22px gray;
-  cursor: pointer;
-  display: flex;
-  align-items: center; /* Center text and arrow horizontally */
+.category-webdev {
+    background: linear-gradient(135deg, #1f1f3a, #2a2a4f); /* Biru gelap keungu */
 }
 
-.menuToggle a {
-  font-size: 35px;
-  color: #D5D5D5;
-  margin-right: 10px; /* Add some spacing between text and arrow */
-  -webkit-text-stroke: 1px gray; /* Add an outline with a width of 1px and the desired color */
-  padding: 8px; /* Adjust padding for spacing between text and outline */
-  border-radius: 8px;
+.category-webdesigner {
+    background: linear-gradient(135deg, #2a2a4f, #3b3b6e); /* Sedikit lebih terang dari webdev */
 }
 
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%); /* Center the submenu horizontally */
-  width: 250px;
-  cursor: pointer;
+.category-animation {
+    background: linear-gradient(135deg, #3b3b6e, #4c4c8d); /* Lebih terang lagi, ke arah ungu */
 }
 
-.submenu .menupil a {
-	font-family: "Courier New", monospace;
-	color:white;
+.category-certificates {
+    background: linear-gradient(135deg, #4c4c8d, #5d5dae); /* Paling terang, masih dalam palet */
 }
 
-.submenu .menupil:hover a {
-	color: #7BB77B;
+/* Warna teks di setiap category-section akan diatur oleh h2, p, card-title, dll. */
+/* Atur warna teks untuk menjaga kontras yang baik pada latar belakang gelap */
+.category-section h2 {
+    color: #e0e0e0; /* Judul tetap terang */
 }
 
-.menu:hover .submenu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.category-section h2::after {
+    background-color: #007bff; /* Underline tetap warna aksen */
 }
 
-.content {
-		margin-top: 250px;
-		align-items:center;
-      display: none;
+.category-section .card {
+    /* Background card sudah diatur di atas, tetap konsisten */
+}
+
+.category-section .btn-primary {
+    background-color: #007bff; /* Tombol di dalam section tetap pakai aksen */
+    border-color: #007bff;
+    color: #fff;
+}
+
+.category-section .btn-primary:hover {
+    background-color: transparent;
+    color: #007bff;
+    border-color: #007bff;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: #0d0d1a; /* Sangat gelap, agar kontras dengan body */
+    color: #ecf0f1;
+    padding: 3rem 0;
+    margin-top: auto;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.social-links a {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.75); /* Sedikit lebih terang */
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #007bff !important;
+    transform: translateY(-3px) scale(1.1);
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    height: 220px; /* Tinggi standar untuk media embed di card */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.embed-responsive iframe,
+.embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover; /* Pastikan media mengisi ruang */
+}
+
+/* Penyesuaian khusus untuk Figma iframe jika diperlukan */
+/* Figma biasanya sudah responsif, tapi ini bisa membantu jika ada masalah */
+.figma-embed-wrapper iframe {
+    /* Gaya tambahan jika dibutuhkan, misal: */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+
+/* --- Responsive Adjustments --- */
+/* ... (Tetap seperti sebelumnya) ... */
+@media (max-width: 992px) {
+    #home h1 {
+        font-size: 2.8rem;
     }
-	
-	.gallery {
-  border: 1px solid #ccc;
+    #home p.lead {
+        font-size: 1.1rem;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    .card-img-top, .embed-responsive {
+        height: 180px;
+    }
+    #non-professional-content h2::after {
+        width: 40px;
+    }
 }
 
-.gallery:hover {
-  border: 1px solid #777;
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    #home h1 {
+        font-size: 2.2rem;
+    }
+    #home p.lead {
+        font-size: 1rem;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .btn-outline-light, .btn-light, .btn-primary, .btn-outline-dark {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .card-img-top, .embed-responsive {
+        height: 160px;
+    }
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
+@media (max-width: 576px) {
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    #home h1 {
+        font-size: 1.8rem;
+    }
+    #home p.lead {
+        font-size: 0.9rem;
+    }
+    .card-title {
+        font-size: 1.2rem;
+    }
+    .card-text {
+        font-size: 0.85rem;
+    }
 }
-
-.desc {
-	color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-.desc a h1 {
-	color:white;
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-.desc a h1:hover {
-	color:#80AF70;
-}
-
-.responsive {
-  padding: 0 40px;
-  margin: 15px auto;
-  width: 35%; /* Use percentages for better responsiveness */
-}
-
-
-/* Media query untuk layar kecil (mobile) */
-@media only screen and (max-width: 767px) {	
-	.bio {
-		left: 70px;
-	}
-	
-	.content {
-		align-items:left;
-	}
-
-	.responsive {
-		display: flex;
-		align-items: center;
-		align-content: center;
-	  padding: 0 10px;
-	  margin: 10px -180px;
-	  width: 19%; /* Use percentages for better responsiveness */
-	}
-	
-	.Backlogo {
-		opacity: 2;
-	}
-	
-	.shows {
-		margin-top: 750px;
-		width: 0;
-	}
-	
-	.welcome-line {
-		left: 10px;
-	}
-	
-	.welcome-line img {
-		border-radius: 20%;
-		width: 350px;
-		height: 500px;
-	}
-	
-	.welcome-line h1 {
-		font-size: 40px;
-	}
-	
-	.bio h1 {
-		font-size: 40px;
-	}
-
-	.bio h2 {
-		margin-top: -30px;
-		font-size: 28px;
-	}
-
-	.bio p {
-		font-size: 15px;
-	}
-  
-	.logo h2 {
-		font-size: 15px;
-	}
-
-	.menuToggle {
-		padding: 18px;
-	}
-	
-	.menuToggle a {
-		font-size: 22px;
-	}
-}
-
