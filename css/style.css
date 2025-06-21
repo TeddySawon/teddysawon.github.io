@@ -2,39 +2,39 @@
 
 /* --- Global Styles --- */
 body {
-    font-family: 'Montserrat', sans-serif; /* Pilihan Font Utama */
-    color: #f0f0f0; /* Ubah warna teks default menjadi abu-abu terang agar terbaca di latar belakang gelap */
+    font-family: 'Montserrat', sans-serif; /* Primary Font Choice */
+    color: #f0f0f0; /* Changed default text color to light gray for better readability on dark backgrounds */
     line-height: 1.6;
-    background-color: #1a1a2e; /* Warna latar belakang utama yang baru */
-    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
-    transition: all 0.3s ease-in-out; /* Transisi untuk perubahan global */
+    background-color: #1a1a2e; /* New primary background color (deep blue/purple) */
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    transition: all 0.3s ease-in-out; /* Global transition for general changes */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif; /* Font untuk Judul */
+    font-family: 'Poppins', sans-serif; /* Font for Headings */
     font-weight: 700;
-    color: #e0e0e0; /* Ubah warna judul menjadi abu-abu terang */
+    color: #e0e0e0; /* Changed heading color to light gray */
 }
 
 /* --- Utility Classes --- */
-/* Tetap pertahankan warna aksen biru terang yang kontras */
+/* Maintain a contrasting bright blue accent color */
 .text-primary-accent {
-    color: #007bff; /* Warna aksen utama */
+    color: #007bff; /* Primary accent color */
 }
 
 .bg-primary-accent {
-    background-color: #007bff; /* Warna aksen utama */
+    background-color: #007bff; /* Primary accent color */
 }
 
 /* --- Navbar --- */
 .navbar {
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color: rgba(26, 26, 46, 0.95); /* Sedikit lebih gelap dari background body, semi-transparan */
+    background-color: rgba(26, 26, 46, 0.95); /* Slightly darker than body background, semi-transparent */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled {
-    background-color: rgba(26, 26, 46, 1) !important; /* Lebih solid saat discroll */
+    background-color: rgba(26, 26, 46, 1) !important; /* More solid when scrolled */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -47,23 +47,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand:hover {
-    color: #007bff !important; /* Warna aksen saat hover */
+    color: #007bff !important; /* Accent color on hover */
 }
 
 .navbar-nav .nav-link {
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.85) !important; /* Pastikan teks cukup terang */
+    color: rgba(255, 255, 255, 0.85) !important; /* Ensure text is bright enough */
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #007bff !important; /* Warna aksen saat hover/active */
+    color: #007bff !important; /* Accent color on hover/active */
     transform: translateY(-2px);
 }
 
 .dropdown-menu {
-    background-color: #2b2b4d; /* Latar belakang dropdown yang sedikit lebih terang dari navbar */
+    background-color: #2b2b4d; /* Dropdown background slightly lighter than navbar */
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -74,14 +74,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dropdown-item:hover {
-    background-color: #007bff; /* Warna aksen saat hover dropdown */
+    background-color: #007bff; /* Accent color on dropdown hover */
     color: #fff !important;
 }
 
 /* --- Home Section --- */
 #home {
-    /* Gunakan warna aksen utama atau gradien yang kontras */
-    background: linear-gradient(135deg, #007bff, #0056b3); /* Tetap gunakan gradien cerah untuk bagian hero */
+    /* Use primary accent color or a contrasting gradient */
+    background: linear-gradient(135deg, #3a0263, #013874); /* Keep a bright gradient for the hero section */
     position: relative;
     z-index: 1;
     padding-top: 56px;
@@ -90,11 +90,11 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff; /* Teks putih di sini sudah bagus */
+    color: #fff; /* White text here is good */
     overflow: hidden;
 }
 
-/* Efek latar belakang partikel/geometris (pastikan kontras) */
+/* Particle/Geometric background effect (ensure good contrast) */
 #home::before {
     content: '';
     position: absolute;
@@ -102,8 +102,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08) 0%, transparent 50%), /* Sedikit lebih terang */
-                radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08) 0%, transparent 50%); /* Sedikit lebih terang */
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08) 0%, transparent 50%), /* Slightly brighter */
+                radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08) 0%, transparent 50%); /* Slightly brighter */
     z-index: -1;
     animation: backgroundPulse 15s infinite alternate;
 }
@@ -118,14 +118,14 @@ h1, h2, h3, h4, h5, h6 {
     height: 180px;
     object-fit: cover;
     border: 5px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Bayangan lebih gelap */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease-in-out;
     margin-bottom: 2rem;
 }
 
 .profile-pic:hover {
     transform: scale(1.1);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Bayangan lebih gelap */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Darker shadow */
 }
 
 #home h1 {
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
-/* Animasi saat elemen dimuat */
+/* Animation when elements are loaded */
 #home.loaded h1,
 #home.loaded p.lead,
 #home.loaded .btn {
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
     animation-delay: 0.9s;
 }
 
-.btn-light { /* Tombol "Lihat Proyek Non-Profesional" */
+.btn-light { /* "See Non-Professional Projects" button */
     background-color: #fff;
     color: #007bff;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -183,13 +183,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
     color: #007bff;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Bayangan lebih gelap */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Darker shadow */
 }
 
 .btn-light:hover {
     background-color: #e0e0e0;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Bayangan lebih gelap */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Darker shadow */
 }
 
 
@@ -201,14 +201,14 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     text-align: center;
     padding-top: 80px;
-    background-color: #2b2b4d; /* Warna latar belakang untuk halaman professional, sedikit lebih terang dari body */
-    color: #f0f0f0; /* Warna teks untuk bagian ini */
+    background-color: #2b2b4d; /* Background color for professional page, slightly lighter than body */
+    color: #f0f0f0; /* Text color for this section */
 }
 
 #professional-content h1 {
     font-size: 3rem;
     font-weight: 800;
-    color: #e0e0e0; /* Ubah warna judul */
+    color: #e0e0e0; /* Changed heading color */
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #professional-content p.lead, #professional-content p {
     font-size: 1.1rem;
-    color: #c0c0c0; /* Warna teks yang lebih terang untuk kontras */
+    color: #c0c0c0; /* Lighter text color for contrast */
     opacity: 0;
     transition: opacity 0.8s ease-out 0.6s;
     max-width: 800px;
@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.8s ease-out 0.9s, transform 0.8s ease-out 0.9s;
 }
 
-/* Animasi saat elemen dimuat */
+/* Animation when elements are loaded */
 #professional-content.loaded h1,
 #professional-content.loaded p.lead,
 #professional-content.loaded p,
@@ -252,12 +252,12 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #0056b3;
     border-color: #0056b3;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Bayangan lebih gelap */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Darker shadow */
 }
 
-.btn-outline-dark { /* Ini akan di halaman professional.html */
-    border-color: #007bff; /* Gunakan warna aksen sebagai border */
-    color: #007bff; /* Gunakan warna aksen sebagai teks */
+.btn-outline-dark { /* This will be on professional.html */
+    border-color: #007bff; /* Use accent color as border */
+    color: #007bff; /* Use accent color as text */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     padding: 12px 30px;
     font-size: 1.1rem;
@@ -268,14 +268,14 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #007bff;
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Bayangan lebih gelap */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4); /* Darker shadow */
 }
 
 
 /* --- Non-Professional Section (`nonProfessional.html`) --- */
 #non-professional-content {
-    padding-top: 80px; /* Offset untuk navbar fixed */
-    background-color: #1a1a2e; /* Latar belakang halaman sesuai body */
+    padding-top: 80px; /* Offset for fixed navbar */
+    background-color: #1a1a2e; /* Page background same as body */
 }
 
 #non-professional-content .container > .mb-5:first-child {
@@ -291,22 +291,22 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 3rem !important;
 }
 
-h1.display-4 { /* Judul di bagian atas halaman nonProfessional.html */
+h1.display-4 { /* Title at the top of nonProfessional.html page */
     font-weight: 800;
-    color: #e0e0e0; /* Ubah warna judul */
+    color: #e0e0e0; /* Changed title color */
 }
 
-p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
-    color: #c0c0c0; /* Ubah warna paragraf */
+p.lead { /* Paragraph below display-4 title on nonProfessional.html */
+    color: #c0c0c0; /* Changed paragraph color */
 }
 
-/* Kategori judul dengan underline animasi */
+/* Category titles with animated underline */
 #non-professional-content h2 {
     position: relative;
     padding-bottom: 0.5em;
     margin-bottom: 2.5rem;
     font-weight: 700;
-    color: #e0e0e0; /* Ubah warna judul kategori */
+    color: #e0e0e0; /* Changed category title color */
     text-align: center;
 }
 
@@ -317,7 +317,7 @@ p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
     bottom: 0;
     width: 60px;
     height: 4px;
-    background-color: #007bff; /* Warna aksen */
+    background-color: #007bff; /* Accent color */
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -327,19 +327,19 @@ p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
     transform: translateX(-50%) scaleX(1);
 }
 
-/* Card Styling (Proyek & Sertifikat) */
+/* Card Styling (Projects & Certificates) */
 .card {
     border: none;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease-in-out;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Bayangan lebih gelap */
-    background-color: #2b2b4d; /* Latar belakang card yang sedikit lebih terang dari body */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    background-color: #2b2b4d; /* Card background slightly lighter than body */
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); /* Bayangan lebih kuat & gelap */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); /* Stronger & darker shadow */
 }
 
 .card-img-top {
@@ -360,19 +360,19 @@ p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
     padding: 1.5rem;
     position: relative;
     z-index: 2;
-    background-color: #2b2b4d; /* Konsisten dengan card background */
+    background-color: #2b2b4d; /* Consistent with card background */
 }
 
 .card-title {
     font-size: 1.35rem;
     font-weight: 600;
-    color: #e0e0e0; /* Ubah warna judul card */
+    color: #e0e0e0; /* Changed card title color */
     margin-bottom: 0.75rem;
 }
 
 .card-text {
     font-size: 0.95rem;
-    color: #c0c0c0; /* Ubah warna teks card */
+    color: #c0c0c0; /* Changed card text color */
     margin-bottom: 1rem;
 }
 
@@ -381,10 +381,10 @@ p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
     font-size: 0.9rem;
     font-weight: 500;
     border-radius: 8px;
-    /* Warna tombol di card ini akan di-override oleh .category-section .btn-primary */
+    /* Button color in this card will be overridden by .category-section .btn-primary */
 }
 
-/* Khusus untuk video embed */
+/* Specific for video embeds */
 .embed-responsive {
     position: relative;
     display: block;
@@ -409,44 +409,44 @@ p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
 }
 
 
-/* --- Non-Professional Section Specific Colors (Disesuaikan untuk tema gelap) --- */
-/* Gunakan gradien yang lebih gelap atau warna solid dengan sedikit opacity/noise untuk setiap section */
+/* --- Non-Professional Section Specific Colors (Adjusted for dark theme) --- */
+/* Use darker gradients or solid colors with slight opacity/noise for each section */
 .category-section {
     transition: background-color 0.5s ease;
 }
 
 .category-webdev {
-    background: linear-gradient(135deg, #1f1f3a, #2a2a4f); /* Biru gelap keungu */
+    background: linear-gradient(135deg, #1f1f3a, #2a2a4f); /* Dark blue to purplish */
 }
 
 .category-webdesigner {
-    background: linear-gradient(135deg, #2a2a4f, #3b3b6e); /* Sedikit lebih terang dari webdev */
+    background: linear-gradient(135deg, #2a2a4f, #3b3b6e); /* Slightly lighter than webdev */
 }
 
 .category-animation {
-    background: linear-gradient(135deg, #3b3b6e, #4c4c8d); /* Lebih terang lagi, ke arah ungu */
+    background: linear-gradient(135deg, #3b3b6e, #4c4c8d); /* Even lighter, towards purple */
 }
 
 .category-certificates {
-    background: linear-gradient(135deg, #4c4c8d, #5d5dae); /* Paling terang, masih dalam palet */
+    background: linear-gradient(135deg, #4c4c8d, #5d5dae); /* Lightest, still within palette */
 }
 
-/* Warna teks di setiap category-section akan diatur oleh h2, p, card-title, dll. */
-/* Atur warna teks untuk menjaga kontras yang baik pada latar belakang gelap */
+/* Text color in each category-section will be managed by h2, p, card-title, etc. */
+/* Set text color to maintain good contrast on dark backgrounds */
 .category-section h2 {
-    color: #e0e0e0; /* Judul tetap terang */
+    color: #e0e0e0; /* Heading remains bright */
 }
 
 .category-section h2::after {
-    background-color: #007bff; /* Underline tetap warna aksen */
+    background-color: #007bff; /* Underline remains accent color */
 }
 
 .category-section .card {
-    /* Background card sudah diatur di atas, tetap konsisten */
+    /* Card background already set above, remain consistent */
 }
 
 .category-section .btn-primary {
-    background-color: #007bff; /* Tombol di dalam section tetap pakai aksen */
+    background-color: #007bff; /* Buttons inside sections still use accent */
     border-color: #007bff;
     color: #fff;
 }
@@ -461,7 +461,7 @@ p.lead { /* Paragraf di bawah judul display-4 nonProfessional.html */
 
 /* --- Footer --- */
 footer {
-    background-color: #0d0d1a; /* Sangat gelap, agar kontras dengan body */
+    background-color: #0d0d1a; /* Very dark, for contrast with body */
     color: #ecf0f1;
     padding: 3rem 0;
     margin-top: auto;
@@ -475,7 +475,7 @@ footer p {
 
 .social-links a {
     font-size: 1.8rem;
-    color: rgba(255, 255, 255, 0.75); /* Sedikit lebih terang */
+    color: rgba(255, 255, 255, 0.75); /* Slightly brighter */
     margin: 0 10px;
     transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -491,7 +491,7 @@ footer p {
     width: 100%;
     padding: 0;
     overflow: hidden;
-    height: 220px; /* Tinggi standar untuk media embed di card */
+    height: 220px; /* Standard height for media embeds in cards */
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -505,20 +505,61 @@ footer p {
     width: 100%;
     height: 100%;
     border: 0;
-    object-fit: cover; /* Pastikan media mengisi ruang */
+    object-fit: cover; /* Ensure media fills the space */
 }
 
-/* Penyesuaian khusus untuk Figma iframe jika diperlukan */
-/* Figma biasanya sudah responsif, tapi ini bisa membantu jika ada masalah */
+/* Specific adjustments for Figma iframe if needed */
+/* Figma is usually responsive, but this can help if there are issues */
 .figma-embed-wrapper iframe {
-    /* Gaya tambahan jika dibutuhkan, misal: */
+    /* Additional styles if needed, e.g.: */
     /* border-radius: 8px; */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
+/* Image modal specific styles */
+.modal-content {
+    background-color: #2b2b4d; /* Dark background for the modal content */
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+.modal-title {
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Make close button visible on dark background */
+}
+
+.project-image-clickable {
+    cursor: pointer; /* Indicate that the image is clickable */
+}
 
 /* --- Responsive Adjustments --- */
-/* ... (Tetap seperti sebelumnya) ... */
+/* ... (Maintain existing responsive styles) ... */
 @media (max-width: 992px) {
     #home h1 {
         font-size: 2.8rem;
