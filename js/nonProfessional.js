@@ -34,7 +34,7 @@ const nonProfessionalProjects = {
   webDesigner: [
     {
       id: "webdesign1",
-      title: "Desain UI Aplikasi Mobile (Konsep)",
+      title: "Shops (The Concept)",
       description:
         "The design concept of the user interface for fictitious mobile applications, focus on intuitive and modern aesthetic UX. Made with Figma.",
       image:
@@ -50,7 +50,7 @@ const nonProfessionalProjects = {
   animation: [
     {
       id: "animation1",
-      title: "Animasi Logo Pembuka (PNG Sequence)", // Ubah judul jika perlu
+      title: "PNG Images", // Ubah judul jika perlu
       description:
         'This image was created with <a target="_blank" href="https://www.blender.org/" style="color:#80AF70">BLENDER</a>. The texture of the image uses an image that is pasted on the 3D model.',
       image: "img/1.png",
@@ -61,7 +61,7 @@ const nonProfessionalProjects = {
     },
     {
       id: "animation2",
-      title: "Animasi Logo Pembuka (PNG Sequence)", // Ubah judul jika perlu
+      title: "PNG Images", // Ubah judul jika perlu
       description:
         'This image is created with <a target="_blank" href="https://www.blender.org/" style="color:#80AF70">BLENDER</a>, and uses the <a target="_blank" href="https://www.adobe.com/id_id/products/substance3d/discover/pbr.html#:~:text=PBR%20adalah%20alur%20kerja%20yang,ilmu%20yang%20sedang%20Anda%20lakukan.%E2%80%9D" style="color:#80AF70">PBR</a> method in processing a texture image.',
       image: "img/2.png",
@@ -72,7 +72,7 @@ const nonProfessionalProjects = {
     },
     {
       id: "animation3",
-      title: "Animasi Logo Pembuka (PNG Sequence)", // Ubah judul jika perlu
+      title: "PNG Images", // Ubah judul jika perlu
       description:
         'This image is created with <a target="_blank" href="https://www.blender.org/" style="color:#80AF70">BLENDER</a>, and uses the <a target="_blank" href="https://www.adobe.com/id_id/products/substance3d/discover/pbr.html#:~:text=PBR%20adalah%20alur%20kerja%20yang,ilmu%20yang%20sedang%20Anda%20lakukan.%E2%80%9D" style="color:#80AF70">PBR</a> method in processing a texture image.',
       image: "img/3.png",
@@ -83,7 +83,7 @@ const nonProfessionalProjects = {
     },
     {
       id: "animation4",
-      title: "Animasi Logo Pembuka (PNG Sequence)", // Ubah judul jika perlu
+      title: "PNG Images", // Ubah judul jika perlu
       description:
         'This image is made with <a target="_blank" href="https://www.blender.org/" style="color:#80AF70">BLENDER</a>, and uses <a target="_blank" href="https://www.mixamo.com/" style="color:#80AF70">MIXAMO</a> as a tool to create several objects, and also still uses the <a target="_blank" href="https://www.adobe.com/id_id/products/substance3d/discover/pbr.html#:~:text=PBR%20adalah%20alur%20kerja%20yang,ilmu%20yang%20sedang%20Anda%20lakukan.%E2%80%9D" style="color:#80AF70">PBR</a> method in processing a texture image.',
       image: "img/4.png", // Thumbnail gambar PNG
