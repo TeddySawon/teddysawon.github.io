@@ -84,11 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         <iframe class="w-full rounded-lg shadow-md" style="border: 1px solid rgba(0, 0, 0, 0.1);" src="${project.figmaEmbed}" allowfullscreen></iframe>
                     </div>`;
         buttonText = 'See design';
-      } else if (isAnimationPng) { // Tambahkan kondisi untuk animasi PNG
+      } else if (isAnimationPng) { // Add condition for PNG animations
           mediaContent = `<img src="${project.image}" class="card-img-top project-image-clickable" alt="${project.title}" data-bs-toggle="modal" data-bs-target="#imageModal" data-image-url="${project.link}">`;
-          buttonText = 'Perbesar Gambar';
-          buttonAttributes = `data-bs-toggle="modal" data-bs-target="#imageModal" data-image-url="${project.link}"`;
-          buttonClasses += ' btn-animated-png'; // Tambahkan kelas kustom jika perlu
+          buttonText = 'Enlarge Image'; // Changed text to English for consistency
+          buttonAttributes = `data-bs-toggle="modal" data-bs-target="#imageModal" data-image-url="${project.link}" class="btn-animated-png"`; // Add btn-animated-png for specific styling if needed
+          buttonClasses = 'btn btn-primary btn-sm mt-2 btn-animated-png'; // Added for the button
       }
       else {
         mediaContent = `<img src="${project.image}" class="card-img-top" alt="${project.title}">`;
@@ -158,12 +158,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- Logika untuk Modal Gambar (Lightbox) ---
   function setupImageModal() {
       const imageModal = document.getElementById('imageModal');
-      if (!imageModal) return; // Pastikan modal ada
+      if (!imageModal) return; // Make sure the modal exists
 
       imageModal.addEventListener('show.bs.modal', function (event) {
+          // Button that triggered the modal
           const opener = event.relatedTarget;
+          // Extract info from data-image-url attributes
           const imageUrl = opener.getAttribute('data-image-url');
 
+          // Update the modal's content.
           const modalImage = imageModal.querySelector('.modal-body img');
           if (modalImage) {
               modalImage.src = imageUrl;
@@ -172,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const modalTitle = imageModal.querySelector('.modal-title');
           if (modalTitle && opener.closest('.card-body')) {
               const projectTitle = opener.closest('.card-body').querySelector('.card-title')?.textContent;
-              modalTitle.textContent = projectTitle || 'Detail Gambar';
+              modalTitle.textContent = projectTitle || 'Image Detail'; // Changed text to English
           }
       });
   }
