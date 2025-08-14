@@ -1,0 +1,353 @@
+/* Portfolio Section */
+.portfolio-section {
+    padding: 80px 0;
+}
+.portfolio-filter {
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    margin: 0 5px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: transparent;
+}
+
+.portfolio-card {
+    background: var(--card-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    height: 100%;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+#portfolio-grid {
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+/* Modern Modal Styles */
+.modal {
+    z-index: 1050;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+}
+
+.modal-main-image.zoomed {
+    z-index: 9999;
+}
+.modal-image-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.modal-image-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
+}
+
+.image-zoom-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.modal-image-container:hover .image-zoom-icon {
+    opacity: 1;
+}
+
+.figma-embed-container {
+    height: 300px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.figma-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.modal-project-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.bg-primary-soft {
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+.bg-gradient-tech {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    color: var(--text-color);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.btn-hover-gradient {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-hover-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.btn-hover-gradient:hover::before {
+    opacity: 1;
+}
+
+.btn-hover-gradient:hover {
+    color: white;
+    border-color: transparent;
+}
+
+.favorite-btn.active {
+    color: #ff4757;
+    border-color: #ff4757;
+}
+
+.modal-main-image {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+[data-theme="dark"] .portfolio-card {
+    .figma-embed-container {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .bg-gradient-tech {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+        border-color: rgba(102, 126, 234, 0.4);
+    }
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.2);
+}
+
+.portfolio-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.portfolio-body {
+    padding: 20px;
+}
+
+.portfolio-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Category Badge Styles */
+.portfolio-category {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    
+    /* Light mode styles */
+    background-color: rgba(102, 126, 234, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .portfolio-category {
+    background-color: rgba(102, 126, 234, 0.2);
+    color: #b8c2ff;
+    border-color: rgba(102, 126, 234, 0.4);
+}
+
+/* Hover effects */
+.portfolio-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.1);
+}
+
+[data-theme="dark"] .portfolio-category:hover {
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+/* Animation */
+.portfolio-category {
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Different colors for different categories */
+.portfolio-category[data-category="web-dev"] {
+    background-color: rgba(102, 126, 234, 0.1);
+    color: var(--primary-color);
+}
+.portfolio-category[data-category="web-design"] {
+    background-color: rgba(240, 147, 251, 0.1);
+    color: #c770e0;
+}
+.portfolio-category[data-category="animation"] {
+    background-color: rgba(75, 192, 192, 0.1);
+    color: #2aa8a8;
+}
+.portfolio-category[data-category="certificate"] {
+    background-color: rgba(255, 159, 64, 0.1);
+    color: #e67e22;
+}
+
+/* Dark mode category colors */
+[data-theme="dark"] .portfolio-category[data-category="web-dev"] {
+    background-color: rgba(102, 126, 234, 0.2);
+    color: #b8c2ff;
+}
+[data-theme="dark"] .portfolio-category[data-category="web-design"] {
+    background-color: rgba(240, 147, 251, 0.2);
+    color: #e6a8f7;
+}
+[data-theme="dark"] .portfolio-category[data-category="animation"] {
+    background-color: rgba(75, 192, 192, 0.2);
+    color: #6de0e0;
+}
+[data-theme="dark"] .portfolio-category[data-category="certificate"] {
+    background-color: rgba(255, 159, 64, 0.2);
+    color: #ffb347;
+}
+
+/* Technology Badges Styles */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.portfolio-tech {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    /* Light mode styles */
+    background-color: rgba(102, 126, 234, 0.1);
+    color: var(--primary-color);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .portfolio-tech {
+    background-color: rgba(102, 126, 234, 0.2);
+    color: #b8c2ff;
+    border-color: rgba(102, 126, 234, 0.5);
+}
+
+/* Hover effects for both modes */
+.portfolio-tech:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .portfolio-tech:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    background: var(--card-color);
+    color: var(--text-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-close {
+    filter: var(--text-color) brightness(1.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .filter-btn {
+        margin: 5px;
+    }
+    .portfolio-tech {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+}

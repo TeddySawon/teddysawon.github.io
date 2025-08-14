@@ -1,0 +1,592 @@
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="90" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+    animation: float 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: pulse 3s ease-in-out infinite;
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 25px 80px rgba(240, 147, 251, 0.4);
+    }
+    100% {
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.profile-image:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #fff, var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    animation: slideInLeft 1s ease-out;
+    line-height: 1.2;
+    background-clip: text;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-content .lead {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    animation: slideInRight 1s ease-out 0.3s both;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.social-links a {
+    color: white;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Skills Section - Enhanced */
+.skills-section {
+    background: var(--bg-color, var(--bg-light));
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M30,10 Q50,5 70,10 T90,30 Q95,50 90,70 T70,90 Q50,95 30,90 T10,70 Q5,50 10,30 T30,10" fill="none" stroke="rgba(102, 126, 234, 0.05)" stroke-width="0.5"/></svg>');
+    background-size: 100px 100px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.row.g-4 {
+    position: relative;
+    z-index: 2;
+}
+
+.skill-card {
+    background: var(--card-color, var(--card-light));
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    color: var(--text-color);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+.skill-card .card-body {
+    padding: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-card .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.skill-card .card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+}
+
+.skill-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+    background-clip: text;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-card h6 {
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    position: relative;
+    display: inline-block;
+}
+
+.skill-card h6::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.3;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 70px rgba(102, 126, 234, 0.25);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+/* Bio card specific styles */
+.skill-card:nth-child(3) .card-text {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.skill-card:nth-child(3) .card-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Floating animation for cards */
+@keyframes float-card {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.skill-card {
+    animation: float-card 6s ease-in-out infinite;
+}
+
+.skill-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.skill-card:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.floating-shapes::before,
+.floating-shapes::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(240, 147, 251, 0.1);
+    animation: float 15s ease-in-out infinite;
+}
+
+.floating-shapes::before {
+    top: 10%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+.floating-shapes::after {
+    bottom: 10%;
+    left: 10%;
+    animation-delay: -10s;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+[data-theme="dark"] .skill-card {
+    background: var(--card-dark);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    animation: bounce 2s infinite;
+    z-index: 3;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+/* Bio Section */
+.bio-section {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-color, var(--bg-light));
+}
+
+.bio-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 Q30,10 40,20 T60,40 Q70,50 60,60 T40,80 Q30,90 20,80 T0,60 Q-10,50 0,40 T20,20" fill="none" stroke="rgba(102, 126, 234, 0.05)" stroke-width="0.5"/></svg>');
+    background-size: 150px 150px;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.bio-content {
+    position: relative;
+    z-index: 2;
+    padding-right: 30px;
+}
+
+.bio-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.bio-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    position: relative;
+    padding-left: 20px;
+}
+
+.bio-text p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.bio-quote {
+    margin-top: 2.5rem;
+    position: relative;
+    padding-left: 30px;
+}
+
+.bio-quote::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -15px;
+    font-size: 4rem;
+    color: var(--accent-color);
+    opacity: 0.3;
+    line-height: 1;
+    font-family: serif;
+}
+
+.bio-quote blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-color);
+    position: relative;
+    padding: 20px;
+    background: rgba(102, 126, 234, 0.05);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Bio Image Styles */
+.bio-image-wrapper {
+    position: relative;
+    padding: 30px;
+}
+
+.bio-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.bio-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.bio-image:hover img {
+    transform: scale(1.03);
+}
+
+.bio-shape-1 {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 0.1;
+    animation: float 8s ease-in-out infinite;
+}
+
+.bio-shape-2 {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.1;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .bio-section {
+        padding: 80px 0;
+    }
+    
+    .bio-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .bio-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bio-text p {
+        font-size: 1rem;
+    }
+    
+    .bio-quote blockquote {
+        font-size: 1.1rem;
+    }
+    
+    .bio-image-wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .bio-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .bio-quote {
+        padding-left: 20px;
+    }
+    
+    .bio-quote::before {
+        font-size: 3rem;
+        top: -10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .skill-card .card-body {
+        padding: 1.5rem;
+    }
+    
+    .skill-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-content .lead {
+        font-size: 1.1rem;
+    }
+     .skill-card .card-body {
+        padding: 2rem;
+    }
+    
+    .skill-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .social-links a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+    }
+    .skills-section {
+        padding: 80px 0;
+    }
+    
+    .skill-card {
+        margin-bottom: 30px;
+        animation: none;
+    }
+    
+    .skill-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .skill-card .card-body {
+        padding: 1.8rem;
+    }
+}

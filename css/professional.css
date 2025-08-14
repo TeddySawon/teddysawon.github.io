@@ -1,0 +1,58 @@
+/* Professional Section */
+.professional-section {
+    padding: 100px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.empty-state {
+    background: var(--card-color);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .empty-state {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    background-clip: text;
+}
+
+.empty-state p.text-muted {
+    color: var(--text-color);
+    opacity: 0.8; /* Sesuaikan opacity untuk tema gelap */
+}
+
+
+.empty-state h3,p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .empty-state {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .empty-state p.text-muted {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .professional-section {
+        padding: 80px 0;
+    }
+    
+    .empty-state {
+        padding: 30px;
+    }
+}
