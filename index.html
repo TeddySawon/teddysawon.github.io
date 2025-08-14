@@ -1,67 +1,305 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teddy Sawon Setyo - PortofolioKu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>PortfolioKu Teddy Sawon</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<body data-theme="light">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">PortofolioKU</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="index.html" data-aos="fade-right">PortfolioKu</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto me-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html" data-lang-key="nav-home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="professional.html">Professional</a>
+                        <a class="nav-link" href="professional.html" data-lang-key="nav-professional">Professional</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Non-Professional
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="nonProfessional.html#web-dev">Web Dev</a></li>
-                            <li><a class="dropdown-item" href="nonProfessional.html#web-designer">Web Designer</a></li>
-                            <li><a class="dropdown-item" href="nonProfessional.html#animation">Animation</a></li>
-                            <li><a class="dropdown-item" href="nonProfessional.html#certificates">Certificates</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="non-professional.html"
+                            data-lang-key="nav-non-professional">Non-Professional</a>
                     </li>
                 </ul>
+
+                <!-- Language Toggle -->
+                <button class="btn language-toggle me-2" onclick="toggleLanguage()" aria-label="Toggle language">
+                    <i class="fas fa-globe"></i> <span id="language-text">EN</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button class="btn theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="d-flex align-items-center vh-100 bg-primary text-white text-center">
-        <div class="container">
-            <img src="img/me.jpg" class="img-fluid rounded-circle mb-4 profile-pic" alt="Foto Profil Anda">
-            <h1 class="display-3 fw-bold mb-3">Hi I'm Teddy Sawon Setyo</h1>
-            <p class="lead mb-4">An enthusiastic lover of learning, always seeking new knowledge to apply in everyday life.</p>
-		    <p class="lead mb-4" style="font-style: italic;">"Understanding is not measured by how long one learns, but how one learns."</p>
-            <a href="professional.html" class="btn btn-outline-light btn-lg me-3">See Professional Projects</a>
-            <a href="nonProfessional.html" class="btn btn-light btn-lg">See Non-Professional Projects</a>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 text-center" data-aos="fade-left">
+                    <img src="img/me.jpg" alt="Profile Picture" class="profile-image img-fluid">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="hero-content">
+                        <h1 data-aos="fade-up" data-lang-key="hero-title">John Developer</h1>
+                        <p class="lead" data-aos="fade-up" data-aos-delay="300" data-lang-key="hero-subtitle">
+                            I create beautiful, functional websites and stunning 3D visuals. Passionate about blending
+                            technology and art to build immersive digital experiences.
+                        </p>
+                        <div class="social-links mb-4" data-aos="fade-up" data-aos-delay="600">
+                            <a href="https://id.linkedin.com/in/teddy-sawon-424aab264" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/teddysawon" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <a href="#skills" class="btn-gradient" data-aos="fade-up" data-aos-delay="800"
+                            data-lang-key="view-skills">
+                            Lihat Keahlian Saya
+                        </a>
+                        <a href="#bio" class="btn-ripple" data-aos="fade-up" data-aos-delay="800"
+                            data-lang-key="view-bio">
+                            Lihat About Me
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-4">
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
         <div class="container">
-            <p>&copy; 2025 Teddy Sawon Setyo. Copyright is protected.</p>
-            <div class="social-links">
-                <a href="https://id.linkedin.com/in/teddy-sawon-424aab264" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
-                <a href="https://github.com/TeddySawon/" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="skills-title">Keahlian Saya</h2>
+            <div class="row g-4">
+                <!-- Programming Skills -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="card-title">Programming</h4>
+                            <div class="mb-3">
+                                <h6 class="fw-bold">Front-End:</h6>
+                                <p class="mb-2">HTML, CSS, JavaScript<br>Bootstrap, Tailwind CSS</p>
+
+                                <h6 class="fw-bold">Back-End:</h6>
+                                <p class="mb-2">PHP (Laravel)<br>Python (Django)</p>
+
+                                <h6 class="fw-bold">Database:</h6>
+                                <p class="mb-2">MySQL (XAMPP)</p>
+
+                                <h6 class="fw-bold">Version Control:</h6>
+                                <p>Git, GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Others Skills -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="skill-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4 class="card-title">Others</h4>
+                            <div class="mb-3">
+                                <h6 class="fw-bold">3D Modeling:</h6>
+                                <p class="mb-2">Blender, Unreal Engine</p>
+
+                                <h6 class="fw-bold">Development:</h6>
+                                <p class="mb-2">SDLC (Software Development Life Cycle)</p>
+
+                                <h6 class="fw-bold">Office Suite:</h6>
+                                <p class="mb-2">Microsoft Office<br>(Word, Excel, PowerPoint)</p>
+
+                                <h6 class="fw-bold">Writing:</h6>
+                                <p>Technical & Creative Writing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio -->
+                <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card skill-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="skill-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h4 class="card-title" data-lang-key="skills-about">Tentang Saya</h4>
+                            <p class="card-text" data-lang-key="bio-text-1">
+                                Saya adalah seorang Full Stack Developer dengan passion dalam teknologi web modern dan
+                                3D modeling. Dengan pengalaman dalam berbagai teknologi, saya senang menciptakan solusi
+                                yang tidak hanya fungsional tetapi juga memberikan pengalaman pengguna yang luar biasa.
+                            </p>
+                            <p class="card-text" data-lang-key="bio-text-2">
+                                Selain coding, saya juga tertarik pada dunia 3D art dan game development, yang membantu
+                                saya mengembangkan perspektif kreatif dalam setiap project yang saya kerjakan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Bio Section -->
+    <section id="bio" class="bio-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Bio Content -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="bio-content">
+                        <h2 class="section-title">About Me</h2>
+                        <h3 class="bio-subtitle">Who I am and what I do</h3>
+                        <div class="bio-text">
+                            <p>I'm a passionate front-end developer and 3D artist with expertise in creating visually
+                                stunning and highly functional digital experiences.</p>
+                            <p>My approach combines technical precision with creative vision to deliver solutions that
+                                are both beautiful and effective.</p>
+                            <p>An enthusiastic lover of learning, always seeking new knowledge to apply in everyday
+                                life.</p>
+                        </div>
+                        <div class="bio-quote">
+                            <blockquote>"Understanding is not measured by how long one learns, but how one learns."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio Image -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="bio-image-wrapper">
+                        <div class="bio-image">
+                            <img src="img/toys.png" alt="Profile Image" class="img-fluid">
+                            <div class="bio-shape-1"></div>
+                            <div class="bio-shape-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        // Initialize AOS after page load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load saved theme first
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+
+            body.setAttribute('data-theme', savedTheme);
+            themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+            // Then initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                easing: 'ease-in-out',
+                offset: 120
+            });
+
+            // Fix for AOS on mobile devices
+            function aosRefresh() {
+                AOS.refresh();
+            }
+            window.addEventListener('load', aosRefresh);
+            window.addEventListener('resize', aosRefresh);
+        });
+
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+
+            // Refresh AOS after theme change
+            setTimeout(() => {
+                AOS.refresh();
+            }, 300);
+        }
+
+        // Smooth scrolling with offset for fixed navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Update URL without page jump
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        location.hash = targetId;
+                    }
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95))';
+            } else {
+                const currentTheme = document.body.getAttribute('data-theme');
+                if (currentTheme === 'dark') {
+                    navbar.style.background = 'linear-gradient(135deg, #2d2d2d, #1a1a1a)';
+                } else {
+                    navbar.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>
